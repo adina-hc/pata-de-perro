@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_activities = gql`
+export const QUERY_ACTIVITIES = gql`
   query getActivities($category: ID) {
     activities(category: $category) {
       _id
@@ -24,7 +24,7 @@ export const QUERY_CHECKOUT = gql`
   }
 `;
 
-export const QUERY_ALL_activities = gql`
+export const QUERY_ALL_ACTIVITIES = gql`
   {
     activities {
       _id
