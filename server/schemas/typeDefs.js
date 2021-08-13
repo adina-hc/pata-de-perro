@@ -5,16 +5,16 @@ const typeDefs = gql`
 enum Place {
   CANCUN,
   CABO,
-  CANCUN,
   HUATULCO,
-  ACAPULCO
+  ACAPULCO,
+  PUERTO VALLARTA
 }
 
 type Category {
     _id: ID
     name: String
   }
-  
+  5845
 type Activity {
     _id: ID
     name: String
