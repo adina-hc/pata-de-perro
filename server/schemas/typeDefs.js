@@ -22,7 +22,7 @@ type Activity {
     image: String
     quantity: Int
     price: Float
-    place: Place
+    place: [Place]
     category: Category
   }
 
@@ -51,7 +51,7 @@ type Activity {
 
   type Query {
     categories: [Category]
-    place: Place
+    place: [Place]
     Activities(category: ID, name: String): [Activity]
     Activity(_id: ID!): Activity
     user: User
