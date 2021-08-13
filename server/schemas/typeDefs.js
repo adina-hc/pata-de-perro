@@ -5,9 +5,9 @@ const typeDefs = gql`
 enum Place {
   CANCUN,
   CABO,
-  CANCUN,
   HUATULCO,
-  ACAPULCO
+  ACAPULCO,
+  PUERTO VALLARTA
 }
 
 type Category {
