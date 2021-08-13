@@ -41,7 +41,7 @@ type Activity {
   }
 
   type Checkout {
-    session: ID
+    session: IDls
   }
 
   type Auth {
