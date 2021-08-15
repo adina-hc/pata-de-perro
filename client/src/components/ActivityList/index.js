@@ -15,6 +15,7 @@ function ActivityList() {
   const { loading, data } = useQuery(QUERY_ACTIVITIES);
 
   useEffect(() => {
+    console.log("data",data)
     if (data) {
       dispatch({
         type: UPDATE_ACTIVITIES,

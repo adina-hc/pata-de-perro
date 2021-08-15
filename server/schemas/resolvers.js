@@ -8,7 +8,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    Activities: async (parent, { category, name }) => {
+    activities: async (parent, { category, name }) => {
       const params = {};
 
       if (category) {
@@ -23,7 +23,7 @@ const resolvers = {
 
       return await Activity.find(params).populate('category');
     },
-    Activity: async (parent, { _id }) => {
+    activity: async (parent, { _id }) => {
       return await Activity.findById(_id).populate('category');
     },
 

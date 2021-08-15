@@ -111,7 +111,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Enjoy a ride in your favorite horse along the beach, explore nature!.',
-      image: 'horse-rising.jpg',
+      image: 'horse-riding.jpeg',
       place: 'PUERTO VALLARTA',
       price: 40.00,
       quantity: 3
@@ -121,7 +121,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Enjoy the sound of the ocean waves while resting with a full body massage. Organic oils and aromatherapy to make you dream.',
-      image: 'massage-tent',
+      image: 'massage-tent.jpeg',
       price: 95.00,
       place: 'CANCUN',
       quantity: 1
