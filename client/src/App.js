@@ -52,7 +52,7 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/contact" component={Contact} />
-              <Route exact path="/products/:id" component={Detail} />
+              <Route exact path="/activities/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>

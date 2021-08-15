@@ -52,8 +52,8 @@ type Activity {
   type Query {
     categories: [Category]
     place: [Place]
-    Activities(category: ID, name: String): [Activity]
-    Activity(_id: ID!): Activity
+    activities(category: ID, name: String): [Activity]
+    activity(_id: ID!): Activity
     user: User
     order(_id: ID!): Order
     checkout(Activities: [ID]!): Checkout
