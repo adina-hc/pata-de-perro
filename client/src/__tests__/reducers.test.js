@@ -1,6 +1,6 @@
 import { reducer } from '../utils/reducers';
 import {
-  UPDATE_PRODUCTS,
+  UPDATE_ACTIVITIES,
   ADD_TO_CART,
   UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
@@ -12,27 +12,27 @@ import {
 } from '../utils/actions';
 
 const initialState = {
-  products: [],
+  activities: [],
   cart: [
     {
       _id: '1',
-      name: 'Soup',
+      name: 'Beach',
       purchaseQuantity: 1
     },
     {
       _id: '2',
-      name: 'Bread',
+      name: 'Night',
       purchaseQuantity: 2
     }
   ],
   cartOpen: false,
-  categories: [{ name: 'Food' }],
+  categories: [{ name: 'Mountain' }],
   currentCategory: '1',
 };
 
-test('UPDATE_PRODUCTS', () => {
+test('UPDATE_ACTIVITIES', () => {
   let newState = reducer(initialState, {
-    type: UPDATE_PRODUCTS,
+    type: UPDATE_ACTIVITIES,
     products: [{}, {}]
   });
 
