@@ -1,6 +1,6 @@
 :root {
-  --primary: #25a2a7;
-  --secondary: #F3A847;
+  --primary: #50a7b3;
+  --secondary: #d6ae56;
   --tertiary: #1f7dd4;
   --light: #e6a45a;
   --dark: #1e3e49;
@@ -80,7 +80,7 @@ a {
 }
 
 a:hover {
-  color: #f3c7ed;
+  color: #e25a0b;
 }
 
 header {

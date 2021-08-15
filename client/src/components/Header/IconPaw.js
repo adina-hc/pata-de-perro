@@ -18,17 +18,19 @@ export default function IconPaw() {
 }
 
 export const Container = styled.div`
+display: flex;
+padding-top:20%;
   .logocontainer {
     height: 300px;
    left: 50%;
    margin-top: -150px;
    margin-left: -125px;
-   position: absolute;
+   position: relative;
    top: 40%;
    width: 400px;
     #homeicon {
-      height: 300px;
-      width: 300px;
+      height: 200px;
+      width: 200px;
       text-shadow: -1px 1px 0px #183954, -2px 2px 0px #183954, -3px 3px 0px #183954,
     -4px 4px 0px #183954, -9px 9px 10px rgba(0, 0, 0, 0.5),
     -9px 9px 25px rgba(0, 0, 0, 0.5);

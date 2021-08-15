@@ -4,34 +4,67 @@ import styled from "styled-components";
 export default function IconTravel() {
   return (
     <Container>
-      <div className="page">
-        <div className="content">
-          <div className="circle">
-            <div className="circle_title">
-              <h2>App</h2>
-              <h3>credits</h3>
+      <div className="iconscont">
+        <div className="page">
+          <div className="content">
+            <div className="circle">
+              <div className="circle_title">
+                <h2>Great Outdoors</h2>
+                <h3>Get some fresh air</h3>
+              </div>
+              <div className="circle_inner">
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc1.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc3.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc2.png" />
+                </div>
+              </div>
+              <div className="content_shadow" />
             </div>
-            <div className="circle_inner">
-              <div className="circle_inner__layer">
-                <img
-                  alt="img1"
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png"
-                />
+          </div>
+          <div className="content">
+            <div className="circle">
+              <div className="circle_title">
+                <h2>City Breaks</h2>
+                <h3>Go somewhere new</h3>
               </div>
-              <div className="circle_inner__layer">
-                <img
-                  alt="img2"
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png"
-                />
+              <div className="circle_inner">
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc4.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc5.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc6.png" />
+                </div>
               </div>
-              <div className="circle_inner__layer">
-                <img
-                  alt="img3"
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png"
-                />
-              </div>
+              <div className="content_shadow" />
             </div>
-            <div className="content_shadow"></div>
+          </div>
+          <div className="content">
+            <div className="circle">
+              <div className="circle_title">
+                <h2>Cheap Flights</h2>
+                <h3>Come fly with me</h3>
+              </div>
+              <div className="circle_inner">
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png" />
+                </div>
+                <div className="circle_inner__layer">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png" />
+                </div>
+              </div>
+              <div className="content_shadow" />
+            </div>
           </div>
         </div>
       </div>
@@ -40,14 +73,13 @@ export default function IconTravel() {
 }
 
 export const Container = styled.div`
-  .page {
-    margin-top: 10%;
-    margin: 0 auto;
-    width: 920px;
-    display: flex;
-
+  .iconscont {
+    font-family: "Nunito", sans-serif;
+    .page {
+      margin: 0 auto;
+      width: 920px;
+    }
     .content {
-      display: flex;
       width: 33.33%;
       display: inline-block;
       margin: 0 auto;
@@ -64,16 +96,16 @@ export const Container = styled.div`
       left: -200px;
       img {
         width: 100%;
-
+        position: absolute;
         bottom: 0;
       }
     }
     .circle {
-      position: fixed;
+      position: absolute;
       left: 0;
       right: 0;
       margin: auto;
-      top: 60%;
+      top: 50%;
       width: 200px;
       transform: translateY(-50%);
       transition: all 0.5s;
@@ -84,15 +116,11 @@ export const Container = styled.div`
           left: -200px;
         }
         h2 {
-          color: #e7b45b;
-          font-family: "Permanent Marker", cursive;
           opacity: 1;
           top: -36px;
           transition: all 0.2s;
-          font-size: 3rem;
         }
         h3 {
-          font-family: "Permanent Marker", cursive;
           opacity: 1;
           top: -36px;
           transition: all 0.2s 0.04s;
@@ -132,37 +160,23 @@ export const Container = styled.div`
     .circle_title {
       text-align: center;
       h2 {
-        color: #e7b45b;
-        font-family: "Permanent Marker", cursive;
-        display: flex;
         opacity: 0;
-        color: #444d4e;
+        color: #4a7479;
         margin: 0;
         transition: all 0.2s 0.04s;
         position: relative;
         top: -10px;
-        justify-content: center;
-        font-size: 10rem;
-        text-shadow: -1px 1px 0px #183954, -2px 2px 0px #183954,
-          -3px 3px 0px #183954, -4px 4px 0px #183954,
-          -9px 9px 10px rgba(0, 0, 0, 0.5), -9px 9px 25px rgba(0, 0, 0, 0.5);
       }
       h3 {
-        font-family: "Permanent Marker", cursive;
-        display: flex;
         opacity: 0;
-        color: #444d4e;
+        color: #4a7479;
         margin: 0;
         transition: all 0.2s 0.04s;
         position: relative;
         top: -10px;
-        justify-content: center;
         transition: all 0.2s;
-        color: #53b9bd;
-        font-size: 4rem;
-        text-shadow: -1px 1px 0px #183954, -2px 2px 0px #183954,
-          -3px 3px 0px #183954, -4px 4px 0px #183954,
-          -9px 9px 10px rgba(0, 0, 0, 0.5), -9px 9px 25px rgba(0, 0, 0, 0.5);
+        color: #b0d5d6;
+        font-size: 15px;
       }
     }
     .circle_inner {
@@ -195,7 +209,7 @@ export const Container = styled.div`
     }
     .content_shadow {
       width: 200px;
-      box-shadow: 0px 31px 19px -2px #8c93a0;
+      box-shadow: 0px 31px 19px -2px #e0e8f9;
       height: 20px;
       border-radius: 70%;
       position: relative;
