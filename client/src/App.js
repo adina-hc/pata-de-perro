@@ -20,6 +20,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
 import  {Container}  from "./components/elements/Container";
+import Wave from "./components/elements/Wave";
 
 
 const httpLink = createHttpLink({
@@ -59,8 +60,8 @@ function App() {
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/activities/:id" component={Detail} />
               <Route component={NoMatch} />
-            </Switch>
-            
+            </Switch>           
+           <Wave/>
           </StoreProvider>
         </Container>
       </Router>
