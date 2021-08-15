@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <Container>
       <Title />
-      <IconPaw />
-      <IconTravel />
+      {/* <IconPaw />
+      <IconTravel /> */}
     </Container>
   );
 }
@@ -24,6 +24,6 @@ export const Container = styled.div`
 
     display: flex;
     justify-content: center;
-    align-content: flex-start;
+    /* align-content: flex-start; */
   }
 `;

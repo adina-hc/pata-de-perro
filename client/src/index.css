@@ -1,9 +1,9 @@
 :root {
-  --primary: #232F3E;
+  --primary: #25a2a7;
   --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
-  --dark: #272f32;
+  --tertiary: #1f7dd4;
+  --light: #e6a45a;
+  --dark: #1e3e49;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -16,6 +16,10 @@
 html,
 body {
   min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  
 }
 
 body {
@@ -34,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Permanent Marker', cursive;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -76,7 +80,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #f3c7ed;
 }
 
 header {

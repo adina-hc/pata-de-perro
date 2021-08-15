@@ -19,7 +19,7 @@ import Contact from "./pages/Contact";
 import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import { Container } from "./components/elements/Container";
+import  {Container}  from "./components/elements/Container";
 
 
 const httpLink = createHttpLink({

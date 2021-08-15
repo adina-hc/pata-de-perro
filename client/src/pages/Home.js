@@ -3,7 +3,7 @@ import ActivityList from "../components/ActivityList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 import Header from "../components/Header/Header";
-import Waves from "../components/elements/Waves";
+import Wave from "../components/elements/Wave";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <CategoryMenu />
       <ActivityList />
       <Cart />
-      <Waves />
+      <Wave />
     </div>
   );
 };

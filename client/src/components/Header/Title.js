@@ -11,13 +11,12 @@ export default function Title() {
 }
 
 export const Container = styled.div`
-  font-family: "Permanent Marker", cursive;
-  position: relative;
+ 
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: flex-start;
+  
   
   h2 {
     font-family: "Permanent Marker", cursive;
