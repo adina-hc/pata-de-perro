@@ -4,17 +4,17 @@ import styled from "styled-components";
 export default function Plane() {
   return (
     <Container>
-      <div class="airplaneAnimation">
-        <div class="plane">
-          <div class="main"></div>
-          <div class="wingOne"></div>
-          <div class="wingTwo"></div>
-          <div class="pollution"></div>
+      <div className="airplaneAnimation">
+        <div className="plane">
+          <div className="main"></div>
+          <div className="wingOne"></div>
+          <div className="wingTwo"></div>
+          <div className="pollution"></div>
         </div>
-        <div class="clouds">
-          <div class="cloudOne"></div>
-          <div class="cloudTwo"></div>
-          <div class="cloudThree"></div>
+        <div className="clouds">
+          <div className="cloudOne"></div>
+          <div className="cloudTwo"></div>
+          <div className="cloudThree"></div>
         </div>
       </div>
     </Container>
