@@ -25,8 +25,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   
+  
   .airplaneAnimation {
-    position: relative;
+    
+    position: fixed;
     width: 400px;
     height: 400px;
     border-radius: 50%;

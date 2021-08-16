@@ -1,9 +1,9 @@
 :root {
   --primary: #50a7b3;
   --secondary: #d6ae56;
-  --tertiary: #1f7dd4;
+  --tertiary: #0c0c0c;
   --light: #e6a45a;
-  --dark: #1e3e49;
+  --dark: #217b7e;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -79,6 +79,11 @@ a {
   font-weight: bold;
 }
 
+.pawmenu:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+
+}
 a:hover {
   color: #e25a0b;
 }

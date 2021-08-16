@@ -1,17 +1,15 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron";
+import Sunset from "../components/elements/Sunset";
 
 const NoMatch = () => {
   return (
     <div>
+      <Sunset />
       <Jumbotron>
-        <h1>404 Page Not Found</h1>
-        <h1>
-          <span role="img" aria-label="Face With Rolling Eyes Emoji">
-            🙄
-          </span>
-        </h1>
-      </Jumbotron>
+        <h1>PAGE NOT FOUND</h1>
+       </Jumbotron>
+      
     </div>
   );
 };
