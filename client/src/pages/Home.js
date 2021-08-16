@@ -9,7 +9,8 @@ const Home = () => {
     <div className="container">
       <Header />
       <IconPaw />
-      <Plane />
+     
+      {/* <Plane /> */}
       <Cart />
     </div>
   );

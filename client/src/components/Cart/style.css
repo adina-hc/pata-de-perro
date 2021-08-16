@@ -46,6 +46,7 @@
 
 .cart-closed:hover {
   transform: rotate(8deg);
+  background-color: #e25a0b;
 }
 
 .cart img {
