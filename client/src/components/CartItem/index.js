@@ -2,6 +2,8 @@ import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { faMinusSquare} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CartItem = ({ item }) => {
 
@@ -37,6 +39,7 @@ const CartItem = ({ item }) => {
   }
 
   return (
+    
     <div className="flex-row">
       <div>
         <img
@@ -47,20 +50,15 @@ const CartItem = ({ item }) => {
       <div>
         <div>{item.name}, ${item.price}</div>
         <div>
-          <span>Qty:</span>
+          <span>Person(s): </span>
           <input
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
+            style={{ textAlign: "center" }}
           />
-          <span
-            role="img"
-            aria-label="trash"
-            onClick={() => removeFromCart(item)}
-          >
-            🗑️
-          </span>
+            <FontAwesomeIcon icon={faMinusSquare}  size="lg" style={{ color: "red" }}  onClick={() => removeFromCart(item)}/> 
         </div>
       </div>
     </div>
