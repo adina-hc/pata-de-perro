@@ -74,7 +74,7 @@ export const Container = styled.div`
     &:hover {
       animation-name: gradient;
       -webkit-animation-name: gradient;
-      animation-duration: 2s;
+      animation-duration: 3s;
       -webkit-animation-duration: s;
       animation-iteration-count: 1;
       -webkit-animation-iteration-count: 1;
