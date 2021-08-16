@@ -47,7 +47,7 @@ function ActivityList() {
 
   return (
     <div className="my-2">
-      <h2>Available Activities:</h2>
+      <h1 style={{textAlign:'center'}}>Available Activities:</h1>
       {state.activities.length ? (
         <CardGridContainer>
           {filterActivities().map((activity) => (
