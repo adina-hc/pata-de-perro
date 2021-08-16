@@ -1,12 +1,12 @@
 import React from "react";
-import Profile from "../components/Profile";
+import ProfileTemplate from "../components/ProfileTemplate";
 
-const UserProfile = () => {
+const Profile = () => {
   return (
     <div className="container">
-      <Profile />
+      <ProfileTemplate />
     </div>
   );
 };
 
-export default UserProfile;
+export default Profile;
