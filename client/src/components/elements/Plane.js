@@ -28,12 +28,13 @@ export const Container = styled.div`
   
   .airplaneAnimation {
     
-    position: fixed;
-    width: 400px;
-    height: 400px;
+    position: relative;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: #caf0f8;
     overflow: hidden;
+    top:100px;
   }
 
   .plane {

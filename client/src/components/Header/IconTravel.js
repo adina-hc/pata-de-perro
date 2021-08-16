@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function IconTravel() {
@@ -6,26 +7,29 @@ export default function IconTravel() {
     <Container>
       <div className="iconscont">
         <div className="page">
-          <div className="content">
-            <div className="circle">
-              <div className="circle_title">
-                <h2>Great Outdoors</h2>
-                <h3>Get some fresh air</h3>
+          <Link to="/activities">
+            <div className="content">
+              <div className="circle">
+                <div className="circle_title">
+                  <h2>Great Outdoors</h2>
+                  <h3>Get some fresh air</h3>
+                </div>
+                <div className="circle_inner">
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc1.png" />
+                  </div>
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc3.png" />
+                  </div>
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc2.png" />
+                  </div>
+                </div>
+                <div className="content_shadow" />
               </div>
-              <div className="circle_inner">
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc1.png" />
-                </div>
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc3.png" />
-                </div>
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc2.png" />
-                </div>
-              </div>
-              <div className="content_shadow" />
             </div>
-          </div>
+          </Link>
+          <Link to="/aboutus">
           <div className="content">
             <div className="circle">
               <div className="circle_title">
@@ -46,26 +50,29 @@ export default function IconTravel() {
               <div className="content_shadow" />
             </div>
           </div>
-          <div className="content">
-            <div className="circle">
-              <div className="circle_title">
-                <h2>Cheap Flights</h2>
-                <h3>Come fly with me</h3>
+          </Link>
+          <Link to="/login">
+            <div className="content">
+              <div className="circle">
+                <div className="circle_title">
+                  <h2>Cheap Flights</h2>
+                  <h3>Come fly with me</h3>
+                </div>
+                <div className="circle_inner">
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png" />
+                  </div>
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png" />
+                  </div>
+                  <div className="circle_inner__layer">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png" />
+                  </div>
+                </div>
+                <div className="content_shadow" />
               </div>
-              <div className="circle_inner">
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png" />
-                </div>
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png" />
-                </div>
-                <div className="circle_inner__layer">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png" />
-                </div>
-              </div>
-              <div className="content_shadow" />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </Container>
@@ -84,7 +91,7 @@ export const Container = styled.div`
       display: inline-block;
       margin: 0 auto;
       position: relative;
-      height: 100vh;
+      height: 50vh;
       max-width: 300px;
     }
     .circle_inner__layer {
