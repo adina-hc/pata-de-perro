@@ -4,9 +4,9 @@ import styled from "styled-components";
 export default function Wave() {
   return (
     <Container>
-      <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
       </div>
     </Container>
   );
