@@ -8,12 +8,13 @@ export default function Header() {
   return (
     <Container>
       <Title />
+      <IconPaw />
     </Container>
   );
 }
 
 export const Container = styled.div`
-  display: flex;
+  display: block;
   height: 10rem;
   .liquid {
     font-family: "Permanent Marker", cursive;

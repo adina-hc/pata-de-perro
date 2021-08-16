@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ACTIVITIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import styled from "styled-components";
 
 function ActivityList() {
   const [state, dispatch] = useStoreContext();
@@ -48,7 +49,7 @@ function ActivityList() {
     <div className="my-2">
       <h2>Available Activities:</h2>
       {state.activities.length ? (
-        <div className="flex-row">
+        <CardGridContainer>
           {filterActivities().map((activity) => (
             <ActivityItem
               key={activity._id}
@@ -57,9 +58,10 @@ function ActivityList() {
               name={activity.name}
               price={activity.price}
               quantity={activity.quantity}
+              description={activity.description}
             />
           ))}
-        </div>
+        </CardGridContainer>
       ) : (
         <h3>You haven't added any activities yet!</h3>
       )}
@@ -69,3 +71,21 @@ function ActivityList() {
 }
 
 export default ActivityList;
+
+
+
+export const CardGridContainer = styled.div` display: grid;
+grid-template-columns: repeat(1, 1fr);
+grid-column-gap: var(--spacing-l);
+grid-row-gap: var(--spacing-l);
+max-width: var(--width-container);
+width: 100%;
+
+@media (min-width: 540px) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 960px) {
+    grid-template-columns: repeat(4, 1fr);
+}
+`;

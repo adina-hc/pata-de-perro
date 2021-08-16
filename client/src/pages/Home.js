@@ -1,19 +1,20 @@
 import React from "react";
 import Cart from "../components/Cart";
 import Header from "../components/Header/Header";
-import IconPaw from "../components/Header/IconPaw";
-import Plane from "../components/elements/Plane";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div className="container">
-      <Header />
-      <IconPaw />
-     
-      {/* <Plane /> */}
+    <HeaderContainer >
+      <Header /> 
       <Cart />
-    </div>
+    </HeaderContainer>
   );
 };
 
 export default Home;
+
+
+export const HeaderContainer = styled.div`
+  height: 70vh; 
+`;
