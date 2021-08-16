@@ -73,6 +73,15 @@ font-family: "Permanent Marker", cursive;
   text-align: center;
   text-transform: uppercase;
 `;
+export const CardOptionsNoteHeader2 = styled.div`
+  font-weight: bold;
+  padding-top: 8px;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+`;
 
 export const CardOptionsNote = styled.small`
   padding-top: 8px;
