@@ -14,6 +14,9 @@ function Nav() {
             <Link to="/aboutus">About us</Link>
           </li>
           <li className="mx-1">
+            <Link to="/Contactus">Contact us</Link>
+          </li>
+          <li className="mx-1">
             <Link to="/activities">Activities</Link>
           </li>
           <li className="mx-1">
