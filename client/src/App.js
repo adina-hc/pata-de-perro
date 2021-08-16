@@ -17,6 +17,7 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import Contact from "./pages/Contact";
 import Aboutus from "./pages/Aboutus";
+import Profile from "./pages/Profile";
 import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
@@ -61,6 +62,7 @@ function App() {
               <Route exact path="/activity/:id" component={Detail} />
               <Route exact path="/activities" component={Activities} />
               <Route exact path="/aboutus" component={Aboutus} />
+              <Route exact path="/profile" component={Profile} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>
