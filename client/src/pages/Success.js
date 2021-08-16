@@ -10,13 +10,13 @@ function Success() {
   useEffect(() => {
     async function saveOrder() {
       const cart = await idbPromise('cart', 'get');
-      const products = cart.map((item) => item._id);
+      const activities = cart.map((item) => item._id);
 
-      if (products.length) {
-        const { data } = await addOrder({ variables: { products } });
-        const productData = data.addOrder.products;
+      if (activities.length) {
+        const { data } = await addOrder({ variables: { activities } });
+        const activityData = data.addOrder.activities;
 
-        productData.forEach((item) => {
+        activityData.forEach((item) => {
           idbPromise('cart', 'delete', item);
         });
       }
@@ -33,7 +33,7 @@ function Success() {
     <div>
       <Jumbotron>
         <h1>Success!</h1>
-        <h2>Thank you for your purchase!</h2>
+        <h2>Thank you for booking your activity!</h2>
         <h2>You will now be redirected to the home page</h2>
       </Jumbotron>
     </div>
