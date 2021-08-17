@@ -2,16 +2,30 @@
 
 # Pata de Perro
   
-    Enjoy your vacation by booking activities online with a wide variety of services. *Pata de Perro* is an expression
+  Enjoy your vacation by booking activities online with a wide variety of services. *Pata de Perro* is an expression
 
   ## Description
-    As a tourist, the user wants to look for a wide variety of summer activities where they can:
-    * view and select
-    * book
-    * pay 
-    for the chosen activities.
+  As a tourist, the user wants to look for a wide variety of summer activities where they can:
+  * view and select
+  * book
+  * pay 
+
+for the chosen activities.
+
+## Table of Contents
+  * [Description](#description "Description")
+  * [Features](#features "Features")
+  * [Installation](#installation "Installation")
+  * [Mockup](#mockup "Mockup")
+  * [License](#license "License")
+  * [Contributing](#contributing "Contributing")
+  * [Tests](#tests "Tests")
+  * [Questions](#questions "Questions")
 
   ## Current Features
+
+  Current features include:
+
   - Navigator
     * Home will take the user to login to view activities
     * Login for users to enter the page or  Signup if visiting for the first time
@@ -19,35 +33,27 @@
     * Cart for the user to see their activities to pay for
     * Logout to leave the session
 
-    Home or landing page: on-click of activity categories, forms display:
+  - Home or landing page: on-click of activity categories, forms display:
     * Login -> existing users   
 
-```
-xxx
-```
 
-## Table of Contents
-  * [Description](#description)
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+
+
 
   ### Installation
 
-  You can install this application by running it on the command line - node ./develop/index.js.
+  You can install this application by running it on the command line
+
+```
+npm install
+npm run develop
+```
  
-  ### Usage
+  ### Mockup animation
 
-  This application works by The developer can answer the set of questions prompted, so that the file is populated with the details of the project, saving time and effort.
+  Functionality is shown below:
 
-  The following image or video will provide with an example of the usage.
-
-  ```bash
-   mockup file image goes here
-  ```
+  ![ImageOrGif]()
 
   Some of the lessons learned during the building process were  .
 
@@ -64,9 +70,9 @@ xxx
 
   ## Questions
   If you have any questions or would like to report any issues, please contact:
-  ```md
+  
   ![eMail address](ahenderson.career@gmail.com)  
   ![GitHub Repo Link](adina-hc)
   ![Link to Application] (https://...)
-  ```
+  
   
