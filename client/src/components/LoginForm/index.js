@@ -140,11 +140,6 @@ function LoginTemplate(props) {
             id="email"
             onChange={handleChange}
           />
-          {error && (
-            <StyledError>
-              <p>{error}</p>
-            </StyledError>
-          )}
 
 <label htmlFor="pwd">Password:</label>
           <StyledUserInput
