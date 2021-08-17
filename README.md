@@ -1,10 +1,26 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Pata de Perro
+  
     Enjoy your vacation by booking activities online with a wide variety of services. *Pata de Perro* is an expression
 
   ## Description
-    As a tourist, the user wants to look for a wide variety of summer activities, where they can choose, book and pay for the chosen activities. 
+    As a tourist, the user wants to look for a wide variety of summer activities where they can:
+    * view and select
+    * book
+    * pay 
+    for the chosen activities.
+
+  ## Current Features
+  - Navigator
+    * Home will take the user to login to view activities
+    * Login for users to enter the page or  Signup if visiting for the first time
+    * Activities display for the user to pick
+    * Cart for the user to see their activities to pay for
+    * Logout to leave the session
+
+    Home or landing page: on-click of activity categories, forms display:
+    * Login -> existing users   
 
 ```
 xxx
