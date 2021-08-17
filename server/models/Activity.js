@@ -22,6 +22,11 @@ const activitySchema = new Schema({
   place: {
     type: String,
   },
+  price: {
+    type: Number,
+    required: true,
+    min: 0.99
+  },
   quantity: {
     type: Number,
     min: 0,

@@ -58,20 +58,16 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ activities: args.activities });
       const line_items = [];
-      console.log(order);
       const { activities } = await order.populate('activities').execPopulate();
-      console.log(activities);
-      console.log(stripe);
       for (let i = 0; i < activities.length; i++) {
-        const activity = await stripe.activities.create({
+        const product = await stripe.products.create({
           name: activities[i].name,
           description: activities[i].description,
           images: [`${url}/images/${activities[i].image}`]
         });
-
         const price = await stripe.prices.create({
-          activity: activity.id,
-          unit_amount: activities[i].price * 100,
+          product: product.id,
+          unit_amount: parseInt(activities[i].price) * 100,
           currency: 'usd',
         });
 
