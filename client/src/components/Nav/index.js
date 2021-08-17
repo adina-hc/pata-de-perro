@@ -204,7 +204,9 @@ function Nav() {
             <li>
               <Link to="/activities">Activities</Link>
             </li>
-            
+            <li>
+              <Link to="/profile">User Profile</Link>
+            </li> 
             <li>
               <Link to="/aboutus">About Us</Link>
             </li>
