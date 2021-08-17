@@ -81,8 +81,6 @@ margin: 0 0 40px 0;
 `;
 
 
-
-
 export default function ContactUs() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
