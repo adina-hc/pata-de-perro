@@ -81,6 +81,8 @@ margin: 0 0 40px 0;
 `;
 
 
+
+
 export default function ContactUs() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -176,6 +178,22 @@ export default function ContactUs() {
             </StyledError>
         )}
 
+      <input type="submit" value="Submit"/>
+      {errorEmailMessage && (
+          <div>
+            <p className="error-text">{errorEmailMessage}</p>
+        </div>
+        )}
+
+    
+        {sent && (
+          <div>
+            <p className="error-text">{sent}</p>
+          </div>
+      )}
+    </form>
+  </div>
+</Container>
     
         {sent && (
           <div>

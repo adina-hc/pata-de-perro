@@ -7,6 +7,7 @@ import { QUERY_ACTIVITIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 import styled from "styled-components";
+import CategoryMenu from "../CategoryMenu";
 
 function ActivityList() {
   const [state, dispatch] = useStoreContext();
@@ -46,10 +47,11 @@ function ActivityList() {
   }
 
   return (
-    <div className="my-2">
+    <DivContainer>
       <h1 style={{textAlign:'center'}}>Available Activities:</h1>
       {state.activities.length ? (
         <CardGridContainer>
+          <CategoryMenu/>
           {filterActivities().map((activity) => (
             <ActivityItem
               key={activity._id}
@@ -66,26 +68,37 @@ function ActivityList() {
         <h3>You haven't added any activities yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
-    </div>
+      <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </DivContainer>
   );
 }
 
 export default ActivityList;
 
 
+export const DivContainer = styled.div` 
+  padding-bottom:100px
+`;
 
-export const CardGridContainer = styled.div` display: grid;
-grid-template-columns: repeat(1, 1fr);
-grid-column-gap: var(--spacing-l);
-grid-row-gap: var(--spacing-l);
-max-width: var(--width-container);
-width: 100%;
+export const CardGridContainer = styled.div` 
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
 
-@media (min-width: 540px) {
-    grid-template-columns: repeat(2, 1fr);
-}
+  @media (min-width: 540px) {
+      grid-template-columns: repeat(2, 1fr);
+  }
 
-@media (min-width: 960px) {
-    grid-template-columns: repeat(4, 1fr);
-}
+  @media (min-width: 960px) {
+      grid-template-columns: repeat(4, 1fr);
+  }
 `;

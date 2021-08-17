@@ -5,25 +5,25 @@ import styled from "styled-components";
 export default function Githubs() {
   return (
     <Container>
-      <div class="row">
+      <div className="row">
         <h1>Development Team</h1>
-        <div class="column">
-          <a href="https://github.com/adina-hc">
+        <div className="column">
+          <a href="https://github.com/adina-hc" target="_blank" rel="noreferrer">
             <button>Adina 🐠</button>
           </a>
-          <a href="https://github.com/izaack89">
+          <a href="https://github.com/izaack89" target="_blank" rel="noreferrer">
           <button>Germán 🐬</button>
           </a>
-          <a href="https://github.com/vicvallejo">
+          <a href="https://github.com/vicvallejo" target="_blank" rel="noreferrer">
           <button>Victor 🐚</button>
           </a>
-          <a href="https://github.com/jorgeatcabo">
+          <a href="https://github.com/jorgeatcabo" target="_blank" rel="noreferrer">
           <button>Jorge 🌴</button>
           </a>
-          <a href="https://github.com/AdrianoArmen">
+          <a href="https://github.com/AdrianoArmen" target="_blank" rel="noreferrer">
           <button>Adriano 🏄</button>
           </a>
-          <a href="https://github.com/adina-hc/pata-de-perro">
+          <a href="https://github.com/adina-hc/pata-de-perro" target="_blank" rel="noreferrer">
           <button>Repository 🦀</button>
           </a>
         </div>

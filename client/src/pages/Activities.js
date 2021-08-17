@@ -4,9 +4,9 @@ import Cart from "../components/Cart";
 
 const Activities = () => {
   return (
-      <>
-        <ActivityList />          
+      <>    
         <Cart />
+        <ActivityList />      
       </>
   );
 };

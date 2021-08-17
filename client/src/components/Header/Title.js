@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Title() {
   return (
-    <Container class="liquid">
+    <Container className="liquid">
       <h2>Pata de Perro</h2>
       <h2>Pata de Perro</h2>
     </Container>
