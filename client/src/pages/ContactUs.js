@@ -1,7 +1,10 @@
 import React, { useState }  from 'react';
 import emailjs from 'emailjs-com';
-import { validateEmail,validateName,validateMessage } from '../utils/helpers';
+import { validateEmail } from '../utils/helpers';
+import styled from "styled-components";
 import '../utils/styles.css'
+
+
 
 export default function ContactUs() {
   const [email, setEmail] = useState('');
@@ -59,38 +62,45 @@ export default function ContactUs() {
     setEmailErrorMessage('')
   };
   return (
+<Container>
+  <div class="container">
+  <h3>Contact Us Form</h3>
+    <form onSubmit={sendEmail}>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name.." required/>
 
-<div class="container">
-<h3>Contact Us Form</h3>
-  <form onSubmit={sendEmail}>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name.." required/>
+      <label for="email">Email</label>
+      <input  value={email} type="email" id="email" name="email" placeholder="Your email.." onChange={handleInputChange} onBlur={handleEmailMouseLeave} required />
 
-    <label for="email">Email</label>
-    <input  value={email} type="email" id="email" name="email" placeholder="Your email.." onChange={handleInputChange} onBlur={handleEmailMouseLeave} required />
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject .." required/>
 
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" placeholder="Subject .." required/>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write something.." style={{height:"100px"}} required></textarea>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write something.." style={{height:"100px"}} required></textarea>
+      <input type="submit" value="Submit"/>
+      {errorEmailMessage && (
+          <div>
+            <p className="error-text">{errorEmailMessage}</p>
+        </div>
+        )}
 
-    <input type="submit" value="Submit"/>
-     {errorEmailMessage && (
-        <div>
-          <p className="error-text">{errorEmailMessage}</p>
-       </div>
-       )}
-
-  
-      {sent && (
-         <div>
-           <p className="error-text">{sent}</p>
-         </div>
-     )}
-  </form>
-</div>
-
+    
+        {sent && (
+          <div>
+            <p className="error-text">{sent}</p>
+          </div>
+      )}
+    </form>
+  </div>
+</Container>
     
   );
 }
+
+
+export const Container = styled.div`
+  height: 80vh; 
+  border-radius: 5px;
+  padding: 20px;
+`;

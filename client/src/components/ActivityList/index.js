@@ -47,7 +47,7 @@ function ActivityList() {
   }
 
   return (
-    <div className="my-2">
+    <DivContainer>
       <h1 style={{textAlign:'center'}}>Available Activities:</h1>
       {state.activities.length ? (
         <CardGridContainer>
@@ -68,13 +68,23 @@ function ActivityList() {
         <h3>You haven't added any activities yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
-    </div>
+      <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </DivContainer>
   );
 }
 
 export default ActivityList;
 
 
+export const DivContainer = styled.div` 
+  padding-bottom:100px
+`;
 
 export const CardGridContainer = styled.div` 
   display: grid;

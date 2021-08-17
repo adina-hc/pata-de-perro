@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
+import { faSignInAlt} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Template Style
 const GlobalStyle = createGlobalStyle`
@@ -25,7 +27,6 @@ const StyledTemplateContainer = styled.div`
   display:flex;
   justify-content:center;
   align-items: center;
-  height: 85vh;
   padding: 0 20px;
   `;
 
@@ -46,16 +47,51 @@ ${multipleStyles};
 `;
 
 const StyledButton = styled.button`
-display: block;
+display: inline;
+width: 50%;
+padding: 12px 0;
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+background-color: #a2ccb6;
 border: 0;
-border-radius: 5px;
-height: 40px;
-padding: 0 20px;
+border-radius: 35px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
 cursor: pointer;
-box-sizing: border-box;
+transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+&:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -5px);
+}
 `;
 
 
+const BackDiv = styled.div`
+display: inline;
+margin-left: 5%;
+width: 50%;
+padding: 12px 10px;
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+color: #fff!important;
+background-color: #cca2a2;
+border: 0;
+border-radius: 35px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+cursor: pointer;
+transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+&:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -5px);
+}
+a{
+  color:white
+}
+`;
 
 
 function SignupTemplate(props) {
@@ -90,7 +126,6 @@ function SignupTemplate(props) {
       <GlobalStyle />
       <StyledTemplateContainer>
         <StyledTemplate onSubmit={handleFormSubmit}>
-          <Link to="/login">← Go to Login</Link>
           <h2>Signup Information</h2>
           <label htmlFor="firstName">First Name:</label>
           <StyledUserInput
@@ -125,7 +160,12 @@ function SignupTemplate(props) {
             onChange={handleChange}
           />
 
-          <StyledButton type="submit">Update User Info</StyledButton>
+          <StyledButton type="submit">Save User Info</StyledButton>
+          <BackDiv>
+            <Link to="/login">
+              <FontAwesomeIcon icon={faSignInAlt}  size="lg" style={{ color: "white" }} />  Go to Login
+            </Link>
+          </BackDiv>
         </StyledTemplate>
       </StyledTemplateContainer>
     </>

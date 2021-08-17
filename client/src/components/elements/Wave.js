@@ -14,9 +14,11 @@ export default function Wave() {
 
 export const Container = styled.div`
 
-  height: auto;
- 
+  height: auto; 
   overflow: hidden;
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
 .ocean {
   background: transparent;
@@ -24,7 +26,6 @@ export const Container = styled.div`
   min-height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  position: relative;
 }
 
 .wave {

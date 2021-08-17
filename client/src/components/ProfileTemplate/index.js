@@ -21,7 +21,7 @@ const StyledTemplateContainer = styled.div`
   display:flex;
   justify-content:center;
   align-items: center;
-  height: 85vh;
+  height: 100%;
   padding: 0 20px;
   `;
 
@@ -43,12 +43,23 @@ ${multipleStyles};
 
 const StyledButton = styled.button`
 display: block;
+width: 100%;
+padding: 12px 0;
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+background-color: #a2ccb6;
 border: 0;
-border-radius: 5px;
-height: 40px;
-padding: 0 20px;
+border-radius: 35px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
 cursor: pointer;
-box-sizing: border-box;
+transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+&:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -5px);
+}
 `;
 
 const StyledFieldset = styled.fieldset`
@@ -79,7 +90,6 @@ margin: 0 0 40px 0;
 const initialState = {
     name: '',
     lastname: '',
-    gender: '',
     email: '',
     password: '',
 }
@@ -119,7 +129,7 @@ const ProfileTemplate = () => {
       <StyledTemplateContainer>
         <StyledTemplate onSubmit={submission}>
           <h2>User Profile Information</h2>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">First Name</label>
           <StyledUserInput
             type="text"
             name="name"
@@ -133,31 +143,8 @@ const ProfileTemplate = () => {
             value={state.lastname}
             onChange={inputChanges}
           />
-          <StyledFieldset>
-            <legend>Gender</legend>
-            <label>
-              <input
-                type="radio"
-                value="female"
-                name="gender"
-                checked={state.gender === "female"}
-                onChange={inputChanges}
-              />
-              Female
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="male"
-                name="gender"
-                checked={state.gender === "male"}
-                onChange={inputChanges}
-              />
-              Male
-            </label>
-          </StyledFieldset>
           <label htmlFor="email" name="email">
-            eMail
+            Email
           </label>
           <StyledUserInput
             type="text"

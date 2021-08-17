@@ -29,7 +29,7 @@ type Activity {
   type Order {
     _id: ID
     purchaseDate: String
-    Activities: [Activity]
+    activities: [Activity]
   }
 
   type User {
@@ -56,12 +56,12 @@ type Activity {
     activity(_id: ID!): Activity
     user: User
     order(_id: ID!): Order
-    checkout(Activities: [ID]!): Checkout
+    checkout(activities: [ID]!): Checkout
   }
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(Activities: [ID]!): Order
+    addOrder(activities: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateActivity(_id: ID!, quantity: Int!): Activity
     login(email: String!, password: String!): Auth

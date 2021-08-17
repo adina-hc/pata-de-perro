@@ -7,12 +7,12 @@ import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-import { faWindowClose,faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faWindowClose,faCartPlus,faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51JNPfPLFMHcbQLphe2y9n01spBjlswS1klvGB4RtPRYt7LQiya7Uic10p9yig3jkceT2xR3JMWwDTIfFpIUTmOe3002iV7nOEc');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -87,7 +87,7 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <CheckoutButton onClick={submitCheckout}><FontAwesomeIcon icon={faCheckCircle}  size="lg" style={{ color: "white" }}/> Checkout</CheckoutButton>
             ) : (
               
             <Link to="/login"><LoginButton>Login</LoginButton></Link>
@@ -117,7 +117,7 @@ export const CarClosed = styled.div`
   padding: .25rem;
   width: 50px;
   height: 50px;
-
+  z-index:100;
   &:hover {
     transform: rotate(18deg);
     background-color: #9fa90c;
@@ -139,6 +139,7 @@ export const CarContainer = styled.div`
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
 
+  z-index:100;
   h2 {
     font-family: "Permanent Marker",cursive;
     font-size: 1.5rem;
@@ -244,5 +245,27 @@ export const LoginButton = styled.button`
   width: 10rem;
   height: 40px;
 
+}
+`;
+
+
+export const CheckoutButton = styled.button`
+display: inline;
+width: 50%;
+padding: 12px 0;
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+background-color: #a2ccb6;
+border: 0;
+border-radius: 35px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+cursor: pointer;
+transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+&:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -5px);
 }
 `;
