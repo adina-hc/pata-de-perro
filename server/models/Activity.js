@@ -14,10 +14,13 @@ const activitySchema = new Schema({
   image: {
     type: String
   },
-  price: {
-    type: Number,
+  name: {
+    type: String,
     required: true,
-    min: 0.99
+    trim: true
+  },
+  place: {
+    type: String,
   },
   quantity: {
     type: Number,
