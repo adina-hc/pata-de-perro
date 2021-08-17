@@ -16,12 +16,14 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import ContactUs from "./pages/ContactUs";
+import Aboutus from "./pages/Aboutus";
+import Profile from "./pages/Profile";
 import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import  {Container}  from "./components/elements/Container";
+import { Container } from "./components/elements/Container";
 import Wave from "./components/elements/Wave";
-
+import Activities from "./pages/Activities";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -50,7 +52,6 @@ function App() {
         <Container>
           <StoreProvider>
             <Nav />
-           
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
@@ -59,10 +60,14 @@ function App() {
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/contactus" component={ContactUs} />
               <Route exact path="/activities/:id" component={Detail} />
+              <Route exact path="/activity/:id" component={Detail} />
+              <Route exact path="/activities" component={Activities} />
+              <Route exact path="/aboutus" component={Aboutus} />
+              <Route exact path="/profile" component={Profile} />
               <Route component={NoMatch} />
-            </Switch>           
-           <Wave/>
+            </Switch>
           </StoreProvider>
+          <Wave />
         </Container>
       </Router>
     </ApolloProvider>

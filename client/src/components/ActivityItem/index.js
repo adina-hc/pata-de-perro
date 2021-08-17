@@ -4,6 +4,20 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import styled from "styled-components";
+import {
+  CardWrapper,
+  CardHeader,
+  CardHeading,
+  CardBody,
+  CardFooter,
+  CardFieldset,
+  CardOptionsItem,
+  CardOptions,
+  CardOptionsNote,
+  CardButton,
+  CardOptionsNoteHeader
+} from "./Card";  
 
 function ActivityItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -13,7 +27,8 @@ function ActivityItem(item) {
     name,
     _id,
     price,
-    quantity
+    quantity,
+    description
   } = item;
 
   const { cart } = state
@@ -40,21 +55,53 @@ function ActivityItem(item) {
   }
  
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/activities/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+<CardWrapper>
+        <CardHeader>
+          <CardHeading>    
+          <Link to={`/activity/${_id}`}>
+            <img
+              alt={name}
+              src={`/images/${image}`}
+            />
+            </Link>
+        </CardHeading>
+        </CardHeader>
+        <CardBody>
+
+          <CardFieldset>
+            <CardOptions>
+              <CardOptionsItem>
+                <CardOptionsNoteHeader>{name}</CardOptionsNoteHeader>
+              </CardOptionsItem>
+              <CardOptionsItem>
+                <CardOptionsNote>{description}</CardOptionsNote>
+              </CardOptionsItem>
+              <CardOptionsItem>
+                <CardOptionsNote>{quantity} {pluralize("reservation", quantity)} left</CardOptionsNote>
+              </CardOptionsItem>
+            </CardOptions>
+          </CardFieldset>
+        </CardBody>
+        <CardFooter>
+          <CardButton type="button"  onClick={addToCart}>Add to Cart</CardButton>
+        </CardFooter>
+      </CardWrapper>
+    // <div className="card px-1 py-1">
+    //   <Link to={`/activity/${_id}`}>
+    //     <img
+    //       alt={name}
+    //       src={`/images/${image}`}
+    //     />
+    //     <p>{name}</p>
+    //   </Link>
+    //   <div>
+    //     <div>{quantity} {pluralize("item", quantity)} in stock</div>
+    //     <span>${price}</span>
+    //   </div>
+    //   <button>Add to cart</button>
+    // </div>
   );
 }
 
 export default ActivityItem;
+
