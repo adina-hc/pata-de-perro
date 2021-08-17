@@ -178,7 +178,6 @@ export default function ContactUs() {
             </StyledError>
         )}
 
-      <input type="submit" value="Submit"/>
       {errorEmailMessage && (
           <div>
             <p className="error-text">{errorEmailMessage}</p>
@@ -191,9 +190,6 @@ export default function ContactUs() {
             <p className="error-text">{sent}</p>
           </div>
       )}
-    </form>
-  </div>
-</Container>
     
         {sent && (
           <div>
