@@ -188,6 +188,7 @@ export default function ContactUs() {
   );
 }
 
+
 export const Container = styled.div`
   height: 80vh; 
   border-radius: 5px;
