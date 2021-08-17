@@ -64,14 +64,13 @@ transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 const StyledDivOneCol = styled.div`
 display: grid;
 grid-template-columns: 1fr;
-align-items: center;
+justify-items: center;
   `;
 
   const StyledDivTwoCols = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-column-gap: 1em;
-align-items: center;
   `;
 
 
@@ -163,8 +162,10 @@ export default function ContactUs() {
       </StyledDivTwoCols>
 
       <StyledDivOneCol>
-        <label for="message">Message</label>
-      <StyledUserInput id="message" name="message" placeholder="Write something.." style={{height:"100px"}} required />
+
+         <label for="message">Message</label>
+         <StyledUserInput id="message" name="message" placeholder="Write something.." style={{height:"100px"}} required />
+      
       </StyledDivOneCol>
 
       <StyledDivOneCol>
