@@ -47,7 +47,7 @@ function CategoryMenu() {
       <h2>Choose a Category:</h2>
       <CategoryList>
       {categories.map((item) => (
-        <CategoryItem>
+        <CategoryItem  key={item._id}>
           <CategoryButton
             key={item._id}
             onClick={() => {

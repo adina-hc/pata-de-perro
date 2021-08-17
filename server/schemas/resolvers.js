@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Activity, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('pk_test_51JNPfPLFMHcbQLphe2y9n01spBjlswS1klvGB4RtPRYt7LQiya7Uic10p9yig3jkceT2xR3JMWwDTIfFpIUTmOe3002iV7nOEc');
+const stripe = require('stripe')('sk_test_51JNPfPLFMHcbQLphojdYxa9lal8NGusSBd98191tGIFrkO7Zx9uu08tVDs610tTz2x4BdioGAbE8SPUyj1E3dfD400SzyoyI86');
 
 const resolvers = {
   Query: {
@@ -58,9 +58,10 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ activities: args.activities });
       const line_items = [];
-
+      console.log(order);
       const { activities } = await order.populate('activities').execPopulate();
-
+      console.log(activities);
+      console.log(stripe);
       for (let i = 0; i < activities.length; i++) {
         const activity = await stripe.activities.create({
           name: activities[i].name,
