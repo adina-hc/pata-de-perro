@@ -186,45 +186,46 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-
         <>
-         <input type="checkbox" aria-label="Toggle menu" />
+          <input type="checkbox" aria-label="Toggle menu" />
           <span></span>
           <span></span>
           <span></span>
-    
-          <a href="/" class="menu-logo" id="pawicon"    >
+
+          <a href="/" className="menu-logo" id="pawicon">
             <img
               src="https://image.flaticon.com/icons/png/512/3464/3464028.png"
               alt="dog paw logo"
             />
           </a>
-          <div class="menu">
-          <ul>
-            <li>
-              <Link to="/activities">Activities</Link>
-            </li>
-            
-            <li>
-              <Link to="/aboutus">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contactus">Contact Us</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="/orderHistory">Order History</Link>
-            </li>
-            <li>
-              <a href="/" onClick={() => Auth.logout()}>
-                Logout
-              </a>
-            </li>
-            <li>
-              <a href=""> </a>
-            </li>
-          </ul>
+          <div className="menu">
+            <ul>
+              <li>
+                <Link to="/activities">Activities</Link>
+              </li>
+              <li>
+                <Link to="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link to="/aboutus">About Us</Link>
+              </li>
+              <li>
+                <Link to="/contactus">Contact Us</Link>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <Link to="/orderHistory">Order History</Link>
+              </li>
+              <li>
+                <a href="/" onClick={() => Auth.logout()}>
+                  Logout
+                </a>
+              </li>
+              <li>
+                <a href=""> </a>
+              </li>
+            </ul>
           </div>
         </>
       );
@@ -236,13 +237,13 @@ function Nav() {
           <span></span>
           <span></span>
     
-          <a href="/" class="menu-logo" id="pawicon"    >
+          <a href="/" className="menu-logo" id="pawicon"    >
             <img
               src="https://image.flaticon.com/icons/png/512/3464/3464028.png"
               alt="dog paw logo"
             />
           </a>
-          <div class="menu">
+          <div className="menu">
           <ul>
             <li>
               <Link to="/activities">Activities</Link>
