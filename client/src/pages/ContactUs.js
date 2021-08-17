@@ -63,7 +63,7 @@ export default function ContactUs() {
   };
   return (
 <Container>
-  <div class="container">
+  <div className="container">
   <h3>Contact Us Form</h3>
     <form onSubmit={sendEmail}>
       <label for="name">Name</label>

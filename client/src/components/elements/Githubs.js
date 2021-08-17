@@ -5,9 +5,9 @@ import styled from "styled-components";
 export default function Githubs() {
   return (
     <Container>
-      <div class="row">
+      <div className="row">
         <h1>Development Team</h1>
-        <div class="column">
+        <div className="column">
           <a href="https://github.com/adina-hc" target="_blank" rel="noreferrer">
             <button>Adina 🐠</button>
           </a>

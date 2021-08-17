@@ -238,13 +238,13 @@ function Nav() {
           <span></span>
           <span></span>
     
-          <a href="/" class="menu-logo" id="pawicon"    >
+          <a href="/" className="menu-logo" id="pawicon"    >
             <img
               src="https://image.flaticon.com/icons/png/512/3464/3464028.png"
               alt="dog paw logo"
             />
           </a>
-          <div class="menu">
+          <div className="menu">
           <ul>
             <li>
               <Link to="/activities">Activities</Link>
