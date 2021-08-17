@@ -68,6 +68,13 @@ function ActivityList() {
         <h3>You haven't added any activities yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
+      <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
     </div>
   );
 }

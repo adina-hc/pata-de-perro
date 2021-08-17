@@ -31,7 +31,7 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Activities',
+          path: 'orders.activities',
           populate: 'category'
         });
 
@@ -45,7 +45,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Activities',
+          path: 'orders.activities',
           populate: 'category'
         });
 
@@ -56,21 +56,21 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ Activitys: args.Activities });
+      const order = new Order({ activities: args.activities });
       const line_items = [];
 
-      const { Activities } = await order.populate('Activities').execPopulate();
+      const { activities } = await order.populate('activities').execPopulate();
 
-      for (let i = 0; i < Activities.length; i++) {
-        const Activity = await stripe.Activities.create({
-          name: Activities[i].name,
-          description: Activities[i].description,
-          images: [`${url}/images/${Activities[i].image}`]
+      for (let i = 0; i < activities.length; i++) {
+        const activity = await stripe.activities.create({
+          name: activities[i].name,
+          description: activities[i].description,
+          images: [`${url}/images/${activities[i].image}`]
         });
 
         const price = await stripe.prices.create({
-          Activity: Activity.id,
-          unit_amount: Activities[i].price * 100,
+          activity: activity.id,
+          unit_amount: activities[i].price * 100,
           currency: 'usd',
         });
 
@@ -98,10 +98,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { Activities }, context) => {
+    addOrder: async (parent, { activities }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ Activities });
+        const order = new Order({ activities });
 
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
