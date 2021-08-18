@@ -206,4 +206,7 @@ export const Container = styled.div`
   height: 80vh; 
   border-radius: 5px;
   padding: 20px;
+  @media (max-width: 700px) {
+    height:120vh;
+  }
 `;

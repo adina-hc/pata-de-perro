@@ -108,7 +108,7 @@ export default Cart;
 export const CarClosed = styled.div`
   
   position: fixed;
-  top: 2%;
+  top: 10%;
   right: 1%;
   font-size: 2rem;
   cursor: pointer;
