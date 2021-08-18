@@ -18,4 +18,7 @@ export const Container = styled.div`
   height: 70vh; 
   padding: 20px;
   text-align: center;
+  @media (max-width: 700px) {
+    height:120vh;
+  }
 `;
