@@ -33,17 +33,17 @@ const initialState = {
 test('UPDATE_ACTIVITIES', () => {
   let newState = reducer(initialState, {
     type: UPDATE_ACTIVITIES,
-    products: [{}, {}]
+    activities: [{}, {}]
   });
 
-  expect(newState.products.length).toBe(2);
-  expect(initialState.products.length).toBe(0);
+  expect(newState.activities.length).toBe(2);
+  expect(initialState.activities.length).toBe(0);
 });
 
 test('ADD_TO_CART', () => {
   let newState = reducer(initialState, {
     type: ADD_TO_CART,
-    product: { purchaseQuantity: 1 }
+    activity: { purchaseQuantity: 1 }
   });
 
   expect(newState.cart.length).toBe(3);
@@ -87,7 +87,7 @@ test('REMOVE_FROM_CART', () => {
 test('ADD_MULTIPLE_TO_CART', () => {
   let newState = reducer(initialState, {
     type: ADD_MULTIPLE_TO_CART,
-    products: [{}, {}]
+    activities: [{}, {}]
   });
 
   expect(newState.cart.length).toBe(4);
