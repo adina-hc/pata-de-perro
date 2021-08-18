@@ -145,17 +145,17 @@ export default function ContactUs() {
       <StyledDivTwoCols>
 
         <div>
-          <label for="name">Name</label>
+          <label htmlFor="name">Name</label>
           <StyledUserInput type="text" id="name" name="name" placeholder="Your name.." required/>
         </div>
 
         <div>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <StyledUserInput  value={email} type="email" id="email" name="email" placeholder="Your email.." onChange={handleInputChange} onBlur={handleEmailMouseLeave} required />
         </div>
       
         <div>
-          <label for="subject">Subject</label>
+          <label htmlFor="subject">Subject</label>
           <StyledUserInput type="text" id="subject" name="subject" placeholder="Subject .." required/>
         </div>
         
@@ -163,7 +163,7 @@ export default function ContactUs() {
 
       <StyledDivOneCol>
 
-         <label for="message">Message</label>
+         <label htmlFor="message">Message</label>
          <StyledUserInput id="message" name="message" placeholder="Write something.." style={{height:"100px"}} required />
       
       </StyledDivOneCol>
@@ -178,7 +178,6 @@ export default function ContactUs() {
             </StyledError>
         )}
 
-      <input type="submit" value="Submit"/>
       {errorEmailMessage && (
           <div>
             <p className="error-text">{errorEmailMessage}</p>
@@ -191,9 +190,6 @@ export default function ContactUs() {
             <p className="error-text">{sent}</p>
           </div>
       )}
-    </form>
-  </div>
-</Container>
     
         {sent && (
           <div>
