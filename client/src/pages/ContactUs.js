@@ -191,11 +191,6 @@ export default function ContactUs() {
           </div>
       )}
     
-        {sent && (
-          <div>
-            <p className="error-text">{sent}</p>
-          </div>
-      )}
     </StyledTemplate>
     </StyledTemplateContainer>
     </>
