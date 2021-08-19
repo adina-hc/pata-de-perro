@@ -20,9 +20,9 @@ db.once("open", async () => {
       name: "Massage",
       category: categories[3]._id,
       description:
-        "Relax and let go with our special massage packages. Our service includes aromatherapy, ice-cold and hot sauna, green detoxing tea, finishing with our award winning massage with hot stones.",
+        "Relax and let go with our special massage packages. Our service includes ice-cold and hot sauna, green detoxing tea, finishing with our award winning massage with hot stones.",
       image: "spa1.png",
-      price: 70.0,
+      price: 95.0,
       place: "ACAPULCO",
       quantity: 1,
     },
@@ -32,14 +32,14 @@ db.once("open", async () => {
       description:
         "Let go of your crowded mind, with the relaxing and healing power of aromatherapy, with our combination of organic oils.",
       image: "spa2.png",
-      price: 95.0,
+      price: 70.0,
       place: "CANCUN",
       quantity: 1,
     },
     {
       name: "Surfing",
       category: categories[0]._id,
-      description: "XXXXX.",
+      description: "Are you an adrenaline junkie? Enjoy the powerful waves and relax in the calm waters",
       image: "beach2.png",
       place: "PUERTO VALLARTA",
       price: 45,
@@ -86,7 +86,7 @@ db.once("open", async () => {
       name: "Snorkeling",
       category: categories[0]._id,
       description:
-        "Like speed in the water? Rent a water scooter and go full speed enjoying the ocean.",
+        "Look at the sea creatures while snorkeling, is like a living museum!",
       image: "beach3.png",
       place: "HUATULCO",
       price: 45,
@@ -96,7 +96,7 @@ db.once("open", async () => {
       name: "Mindfulness and Yoga",
       category: categories[3]._id,
       description:
-        "Like speed in the water? Rent a water scooter and go full speed enjoying the ocean.",
+        "Relax and breathe, let go of your busy mind and connect with your body with our yoga packages",
       image: "spa3.png",
       place: "PUERTO VALLARTA",
       price: 35,
