@@ -10,4 +10,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-serviceWorker.register();
+if (process.env.NODE_ENV === 'development') {
+  serviceWorker.unregister()
+} else {
+ serviceWorker.register()
+}
