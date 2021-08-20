@@ -20,12 +20,11 @@ This application includes a variety of functionality described in the Features s
   - [Features](#features "Features")
   - [Technologies](#technologies "Technologies")
   - [Installation](#installation "Installation")
-  - [Mockup](#mockup "Mockup")
-  - [License](#license "License")
-  - [Contributors](#contributors "Contributors")
   - [Tests](#tests "Tests")
+  - [Mockup](#mockup "Mockup")
+  - [Contributors](#contributors "Contributors")
   - [Questions](#questions "Questions")
-  - [Links to App](#links "Links to App")
+  - [Links](#links "Links to App") to the app and repo
 
 
 ____________________
@@ -66,12 +65,12 @@ _______
 
  ## Technologies
   
-  | Back-end | |Front-end |
-  | -------- |--- |--------- |
-  | MERN | | CSS |
-  | GraphQL | | Styled-components |
-  | JWT | | Font awesome |
-  | Stripe | |  
+  | Back-end | Front-end |
+  | -------- | --------- |
+  | MERN | CSS |
+  | GraphQL | Styled-components |
+  | JWT | Font awesome |
+  | Stripe |  
    
 > Also included are the service worker and the manifest.   
 
@@ -101,7 +100,7 @@ _____
 
 ____
 
-  ## Mockup images
+  ## Mockup
 
   Functionality is shown below:   
   
@@ -131,7 +130,7 @@ ____
 ![Fourth Animation](./assets/pata-de-perro4.gif)
 _____
 
-  ## Contributors to this project:
+  ## Contributors
 
   | Contributors | GitHub Repo |
   | ------------ | :-----------: |
@@ -150,7 +149,8 @@ ___________
   
 ______________________
 
-  ## Links to App 
+  ## Links  
+
   Repo:
   [🦀](https://github.com/adina-hc/pata-de-perro "Pata de Perro GitHub")
 
