@@ -1,7 +1,7 @@
-self.addEventListener('message', async (event) => {
+this.addEventListener('message', async (event) => {
     console.log('Got message in the service worker', event);
 });
-self.addEventListener('fetch', function(event) {
+this.addEventListener('fetch', function(event) {
     event.respondWith(async function() {
        try{
          var res = await fetch(event.request);
@@ -10,6 +10,7 @@ self.addEventListener('fetch', function(event) {
          return res;
        }
        catch(error){
+           console.log(error,event.request.url)
          return caches.match(event.request);
         }
       }());
