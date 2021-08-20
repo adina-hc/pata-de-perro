@@ -21,10 +21,10 @@ This application includes a variety of functionality described in the Features s
   - [Technologies](#technologies "Technologies")
   - [Installation](#installation "Installation")
   - [Tests](#tests "Tests")
-  - [Mockup](#mockup "Mockup")
-  - [Contributors](#contributors "Contributors")
+  - [Mockup Images](#mockup-images "Mockup")
+  - [Contributors](#contributors-to-this-project "Contributors")
   - [Questions](#questions "Questions")
-  - [Links](#links "Links to App") to the app and repo
+  - [Links to the App](#links-to-the-app "Links to App") 
 
 
 ____________________
@@ -100,7 +100,7 @@ _____
 
 ____
 
-  ## Mockup
+  ## Mockup images
 
   Functionality is shown below:   
   
@@ -130,7 +130,7 @@ ____
 ![Fourth Animation](./assets/pata-de-perro4.gif)
 _____
 
-  ## Contributors
+  ## Contributors to this project
 
   | Contributors | GitHub Repo |
   | ------------ | :-----------: |
@@ -149,8 +149,8 @@ ___________
   
 ______________________
 
-  ## Links  
-
+  ## Links to the App
+     
   Repo:
   [🦀](https://github.com/adina-hc/pata-de-perro "Pata de Perro GitHub")
 
