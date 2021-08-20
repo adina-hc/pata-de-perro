@@ -17,4 +17,7 @@ export default Signup;
 export const Container = styled.div`
   height: 70vh; 
   padding: 20px;
+  @media (max-width: 700px) {
+  height:120vh;
+  padding:10px
 `;

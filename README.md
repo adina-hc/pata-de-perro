@@ -1,19 +1,6 @@
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<style>
-  body {
-    background: linear-gradient(
-    rgba(254,249,215,1) 20%,
-    rgba(238,174,202,1) 50%,  
-    #fef9d7 95%
-  );
-  overflow: hidden;
-  color: #2C787E;
-
-  }
-
-</style>  
 
 # Pata de Perro <img src="design/apple-touch-icon.png" width="80" height="80"> </img>
 
@@ -31,6 +18,7 @@ This application includes a variety of functionality described in the Features s
 ## Table of Contents
   - [Description](#description "Description")
   - [Features](#features "Features")
+  - [Technologies](#technologies "Technologies")
   - [Installation](#installation "Installation")
   - [Mockup](#mockup "Mockup")
   - [License](#license "License")
@@ -74,6 +62,18 @@ ____________________
   4. Admin sit to update activities and categories
   5. Streaming videos of activities
 
+_______
+
+ ## Technologies
+  
+  | Back-end | |Front-end |
+  | -------- |--- |--------- |
+  | MERN | | CSS |
+  | GraphQL | | Styled-components |
+  | JWT | | Font awesome |
+  | Stripe | |  
+   
+> Also included are the service worker and the manifest.   
 
 _______
 
@@ -103,20 +103,32 @@ ____
 
   ## Mockup images
 
-  Functionality is shown below:
+  Functionality is shown below:   
+  
   ![Desktop & Mobile](./assets/PdPmockup1.jpg)
   ![Multiple Devices](./assets/PdPmockup2.jpg)
 
   ## Animation
-  This first animation shows the user navigating the home page, going through the About Us where developers links to their GitHub repositories are displayed.
-  The user signs up and selects an activity to purchase, goes to cart and is ready to make a payment.
+  1. The first animation depicts an existing user loggin into the website, navigating through the `Activities` section, selecting and activity and proceeding to checkout in the `Cart` and submitting payment. Then being redirected back to the page and looking at their `Order History`.   
 
-  ![Animation-1](./assets/pata-de-perro1.gif)
+![First Animation Existing User](./assets/pata-de-perro1.gif)  
 
-  The second animation depicts the user...
+  2. The second animation depicts the user browsing to `About Us` section in the navbar, where when redirected, the user can click on the developers buttons, which will open in a different browser page (depicted on the fourth animation). The user then navigates to the `Contact Us` page, sending a message. Also, browsing to `User Profile` where in __future__ __features__ the user will be able to update their information and password.
 
-  ... (second animation to be included here) ...
+![Second Animation Existing User](./assets/pata-de-perro2.gif) 
+
+  3. Third animation: shows the new user functionality to sign up by creating their account. New users will then have the same access capability as the one depicted in the second animation.
+
+![Third Animation New User](./assets/pata-de-perro3.gif)   
+
+  The user can also select activities that will save in their carts while they are off-line
+
+  The fourth animation depicts the user browsing through the `About Us` development team, being able to click on each developer to be redirected the their respective GitHub Repositories.
+  Also, it shows the app manifest and service workers.
   
+  The user can select and activity while being off-line and being stored in their cart and visible when they go  on-line.   
+
+![Fourth Animation](./assets/pata-de-perro4.gif)
 _____
 
   ## Contributors to this project:
