@@ -17,13 +17,13 @@
 
 # Pata de Perro <img src="design/apple-touch-icon.png" width="80" height="80"> </img>
 
-  Enjoy your vacation by booking activities online with a wide variety of services. -Pata de Perro- is a Mexican expression that means or it is referred to people who have a strong desire to leave a place and to travel, or just being out in the street.
+  Enjoy your vacation by booking activities online with a wide variety of services. <b><i>Pata de Perro</i></b> is a Mexican expression that means or it is referred to people who have a strong desire to leave a place and to travel, or just being out in the street.
 
   ## Description
   
   __AS__ a tourist, the user wants to look for a wide variety of summer activities where they:<br>
-  __I WANT__ to view, select and book a variety of tourist available experiences<br>
-  __SO THAT__ I can make the most of my vacation time.
+  __CAN__ view, select and book a variety of tourist available experiences<br>
+  __SO THAT__ they can make the most of their vacation time.
   
 This application includes a variety of functionality described in the Features section below.
 
@@ -38,13 +38,9 @@ This application includes a variety of functionality described in the Features s
   - [Tests](#tests "Tests")
   - [Questions](#questions "Questions")
   - [Links to App](#links "Links to App")
-<style>
-  ol {
-    color: black
-    font-color: black
-  }  
-</style>
 
+
+____________________
 
   ## Features
 
@@ -71,7 +67,7 @@ This application includes a variety of functionality described in the Features s
 
   - Cart: when the user picks and activity to book it, they can see their selected items in the cart
 
-  Future features may include:
+  __Future features__ may include:
   1. Ability for the user to update their profile info and password
   2. Booking availability with dates and times
   3. Filter by location
@@ -117,22 +113,23 @@ ____
 
   ![Animation-1](./assets/pata-de-perro1.gif)
 
-  The second animation depicts the user
-  
+  The second animation depicts the user...
 
+  ... (second animation to be included here) ...
+  
 _____
 
   ## Contributors to this project:
 
   | Contributors | GitHub Repo |
-  | ------------ | ----------- |
+  | ------------ | :-----------: |
+  | Adina Henderson| [🐠<](https://github.com/adina-hc "Adina's GitHub Repo") |
   | Adriano Armendaris|[🏄](https://github.com/AdrianoArmen "Adriano's GitHub Repo") |
   | German Ramirez|[🐬](https://github.com/izaack89 "German's GitHub Repo") |
   | Jorge Soto|[🌴](https://github.com/jorgeatcabo "Jorge's GitHub Repo") |
   | Victor Vallejo|[🐚](https://github.com/vicvallejo "Victor's GitHub Repo") |
-  | Adina Henderson|[🐠<](https://github.com/adina-hc "Adina's GitHub Repo") |
 
-
+___________
 
   ## Questions
   If you have any questions or would like to report any issues, please contact us at:
