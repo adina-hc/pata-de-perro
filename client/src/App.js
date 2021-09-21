@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -8,22 +8,23 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import GlobalStyle from "./utils/GlobalStyle?";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Nav from "./components/Nav";
 import ContactUs from "./pages/ContactUs";
 import Aboutus from "./pages/Aboutus";
 import Profile from "./pages/Profile";
 import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import { Container } from "./components/elements/Container";
-import Wave from "./components/elements/Wave";
+import { Container } from "./components/GlobalElements/Container";
 import Activities from "./pages/Activities";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import GlobalStyle from "./components/GlobalElements/GlobalStyle";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -45,13 +46,20 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [isOpenMenu,setIsOpenMenu] = useState(false);
+
+  const toggleNav = () =>{
+    console.log("AS");
+    setIsOpenMenu(!isOpenMenu);
+  }
   return (
     <ApolloProvider client={client}>
       <GlobalStyle />
       <Router>
         <Container>
           <StoreProvider>
-            <Nav />
+          <Sidebar isOpenMenu={isOpenMenu} toggleNav={toggleNav}/>
+            <Navbar  isOpenMenu={isOpenMenu}  toggleNav={toggleNav}/>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
@@ -67,7 +75,7 @@ function App() {
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>
-          <Wave />
+          <Footer/>
         </Container>
       </Router>
     </ApolloProvider>

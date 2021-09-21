@@ -27,7 +27,15 @@ const resolvers = {
       return await Activity.findById(_id).populate('category');
     },
 
+    userinfo: async (parent, args, context) => {
 
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate('category');
+        return user;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({

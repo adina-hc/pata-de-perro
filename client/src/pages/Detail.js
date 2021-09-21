@@ -13,9 +13,7 @@ import {
 import { QUERY_ACTIVITIES } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import styled from "styled-components";
-import CardDetails from "./../components/elements/CardDetails";
-import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CartDetailsSection from "./../components/Cart/CartDetails";
 import spinner from "../assets/spinner.gif";
 
 function Detail() {
@@ -93,34 +91,16 @@ function Detail() {
             ← Back to Activities
           </Link>
           <StyledContainer>
-            <CardDetails
+            <CartDetailsSection
               title={currentActivity.name}
               img={`/images/${currentActivity.image}`}
               description={currentActivity.description}
               price={`$ ${currentActivity.price}.00 USD`}
+              addToCart ={addToCart}
+              removeFromCart ={removeFromCart}
+              cart={cart}
+              currentActivity= {currentActivity}
             />
-            <>
-              <AddItem onClick={addToCart}>
-                <FontAwesomeIcon
-                  icon={faPlusCircle}
-                  size="sm"
-                  style={{ color: "white" }}
-                />{" "}
-                Add to Cart
-              </AddItem>
-              <RemoveItem
-                disabled={!cart.find((p) => p._id === currentActivity._id)}
-                onClick={removeFromCart}
-              >
-                <FontAwesomeIcon
-                  icon={faMinusCircle}
-                  size="sm"
-                  style={{ color: "white" }}
-                />{" "}
-                Remove from Cart
-              </RemoveItem>
-              <br />
-            </>
           </StyledContainer>
         </StyledRoot>
       ) : null}
@@ -133,57 +113,21 @@ function Detail() {
 export default Detail;
 const StyledRoot = styled.div`
   padding: 10px 12px;
-`;
-const AddItem = styled.button`
-  display: inline;
-  width: 40%;
-  padding: 12px 0;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #a2ccb6;
-  border: 0;
-  border-radius: 35px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-  position: relative;
-  bottom: 40px;
-  &:hover {
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
-    transform: translate(0, -5px);
-  }
-`;
-
-const RemoveItem = styled.button`
-  display: inline;
-  width: 40%;
-  padding: 12px 0;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #cca2a2;
-  border: 0;
-  border-radius: 35px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-  position: relative;
-  bottom: 40px;
-  left: 60px;
-  &:hover {
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
-    transform: translate(0, -5px);
+  @media (max-width: 569px) {
+    height: 170vh; 
   }
 `;
 
 const StyledContainer = styled.div`
-  max-width: 400px;
+  max-width: 1000px;
   width: 100%;
-  margin: auto;
+  margin-left: 15%;
+  margin-top: 5%;
   @media (max-width: 650px) {
     max-width: 200px;
+  }
+  @media (max-width: 769px) {
+    max-width: 800px;
+    margin-left: 5%;
   }
 `;
