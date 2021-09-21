@@ -1,16 +1,9 @@
 import React from "react";
-import Jumbotron from "../components/Jumbotron";
-import Sunset from "../components/elements/Sunset";
+import NotFoundSection from "../components/NotFound";
 
 const NoMatch = () => {
   return (
-    <div>
-      <Sunset />
-      <Jumbotron>
-        <h1>PAGE NOT FOUND</h1>
-       </Jumbotron>
-      
-    </div>
+    <NotFoundSection/>
   );
 };
 

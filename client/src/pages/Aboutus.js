@@ -1,24 +1,11 @@
 import React from "react";
-import Githubs from "../components/elements/Githubs";
-import styled from "styled-components";
+import AboutUs from "../components/AboutUs";
 
 
 const Aboutus = () => {
   return (
-    <Container >
-        
-      <Githubs />
-    </Container>
+      <AboutUs/>
   );
 };
 
 export default Aboutus;
-
-export const Container = styled.div`
-  height: 70vh; 
-  padding: 20px;
-  text-align: center;
-  @media (max-width: 700px) {
-    height:120vh;
-  }
-`;

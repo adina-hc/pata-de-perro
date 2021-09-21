@@ -68,3 +68,14 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_USERINFO = gql`
+  {
+    userinfo {
+      firstName
+      lastName
+      email
+      password
+    }
+  }
+`;

@@ -14,8 +14,7 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "cd client && npm run build"
   },
-
-  "markdown.syles":[
+  "markdown.syles": [
     "Styles.css"
   ],
   "keywords": [],
@@ -28,6 +27,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "react-icons": "^4.2.0"
   }
 }

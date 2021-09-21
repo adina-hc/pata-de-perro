@@ -37,6 +37,7 @@ type Activity {
     firstName: String
     lastName: String
     email: String
+    password: String
     orders: [Order]
   }
 
@@ -55,6 +56,7 @@ type Activity {
     activities(category: ID, name: String): [Activity]
     activity(_id: ID!): Activity
     user: User
+    userinfo: User
     order(_id: ID!): Order
     checkout(activities: [ID]!): Checkout
   }
@@ -62,7 +64,7 @@ type Activity {
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addOrder(activities: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateUser(firstName: String!, lastName: String!): User
     updateActivity(_id: ID!, quantity: Int!): Activity
     login(email: String!, password: String!): Auth
   }

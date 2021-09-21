@@ -1,19 +1,12 @@
 import React from "react";
-import ProfileTemplate from "../components/ProfileTemplate";
-import styled from "styled-components";
+import ProfilePage from "../components/Profile";
 
 const Profile = () => {
   return (
-    <Container >
-      <ProfileTemplate />
-    </Container>
+      <ProfilePage />
   );
 };
 
 export default Profile;
 
 
-export const Container = styled.div`
-  height: 70vh; 
-  padding: 20px;
-`;
