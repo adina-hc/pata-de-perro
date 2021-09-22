@@ -9,7 +9,7 @@ const AboutUs = () => {
                     <GitHubTitle>Development Team</GitHubTitle>
                     <GitHubList>
                         <GitHubLink  href="https://github.com/adina-hc" target="_blank" rel="noreferrer">
-                            <GitHubButton>Adinam 🐠</GitHubButton>
+                            <GitHubButton>Adina 🐠</GitHubButton>
                         </GitHubLink>
                         <GitHubLink  href="https://github.com/adina-hc" target="_blank" rel="noreferrer">
                             <GitHubButton>Germán 🐬</GitHubButton>

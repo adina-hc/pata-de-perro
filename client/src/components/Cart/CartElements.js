@@ -25,6 +25,8 @@ export const CartContainer = styled.div`
         max-width: 100%;
         min-width: 100%;
         min-height: 100%;
+        padding-left: 0.40rem;
+        padding:0;
     }
 `;
 
